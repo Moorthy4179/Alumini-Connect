@@ -1,0 +1,109 @@
+.home-container {
+  width: 100%;
+}
+
+
+
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+
+.community-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.guidelines-section {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.search-section {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.search-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.search-box input {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.search-btn {
+  padding: 10px 20px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.search-btn:hover {
+  background: #0056b3;
+}
+
+.alumni-records {
+  width: 80%;
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.alumni-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.alumni-table th, .alumni-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: center;
+}
+
+.alumni-table th {
+  background-color: #007bff;
+  color: white;
+}
+
+.alumni-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.alumni-table tr:hover {
+  background-color: #e9ecef;
+}
+
+.add-friend-btn {
+  padding: 6px 12px;
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.add-friend-btn:hover {
+  background: #218838;
+}
+
+.community-footer {
+  margin-top: 20px;
+  font-weight: bold;
+  color: #555;
+}

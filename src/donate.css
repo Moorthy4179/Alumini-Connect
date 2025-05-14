@@ -1,0 +1,213 @@
+/* Basic Reset */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', 'Segoe UI', sans-serif;
+    overflow-x: hidden;
+  }
+  
+  /* Navbar */
+  /* .navbar {
+    background-color: #004080;
+    display: flex;
+  padding: 12px 24px;
+  justify-content: center;
+  gap: 16px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+  }
+  
+  .nav-links li {
+    position: relative;
+  }
+  
+  .navbar a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+  
+  .navbar a:hover {
+    color: #0059b3;
+    transform: scale(1.1);
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 180px;
+    top: 100%;
+    left: 0;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    overflow: hidden;
+    animation: dropdown 0.4s ease;
+  }
+  
+  @keyframes dropdown {
+    0% { transform: translateY(-20px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+  }
+  
+  .dropdown-content a {
+    color: #004080;
+    padding: 12px 16px;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #004080;
+    color: #fff;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .contact-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .contact-icon:hover {
+    transform: scale(1.1);
+  }
+  
+  .logout-btn {
+    background-color: #d63031;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+  
+  .logout-btn:hover {
+    background-color: #c0392b;
+    transform: translateY(-2px);
+  } */
+  
+  /* Donate Page */
+  .donate-page {
+    padding: 60px 20px;
+    text-align: center;
+    animation: fadeIn 1s ease;
+  }
+  
+  @keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  
+  .main-heading {
+    font-size: 40px;
+    color: #2c3e50;
+    margin-bottom: 10px;
+  }
+  
+  .intro-text {
+    font-size: 20px;
+    color: #2d3436;
+    margin-bottom: 40px;
+  }
+  
+  /* Donate Options */
+  .donate-options {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+  }
+  
+  .donate-card {
+    background: white;
+    width: 320px;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 15px 25px rgba(0,0,0,0.15);
+    transition: transform 0.5s, box-shadow 0.5s;
+    perspective: 1000px;
+  }
+  
+  .donate-card:hover {
+    transform: rotateY(10deg) scale(1.05);
+    box-shadow: 0 20px 35px rgba(0,0,0,0.25);
+  }
+  
+  .donate-card h2 {
+    color: #0984e3;
+    margin-bottom: 15px;
+    font-size: 24px;
+  }
+  
+  .donate-card p {
+    color: #2d3436;
+    font-size: 16px;
+  }
+  
+  /* Info Section */
+  .info-section {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    margin-top: 60px;
+  }
+  
+  .info-box {
+    background: white;
+    width: 320px;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 15px 25px rgba(0,0,0,0.15);
+    transition: transform 0.5s, box-shadow 0.5s;
+  }
+  
+  .info-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 35px rgba(0,0,0,0.25);
+  }
+  
+  .info-box h3 {
+    color: #00cec9;
+    margin-bottom: 15px;
+    font-size: 24px;
+  }
+  
+  .info-box ul {
+    text-align: left;
+    padding-left: 20px;
+  }
+  
+  .info-box li {
+    color: #2d3436;
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  
