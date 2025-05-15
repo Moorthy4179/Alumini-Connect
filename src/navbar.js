@@ -124,7 +124,17 @@ const CustomNavbar = () => {
               </NavDropdown.Item>
             </NavDropdown>
 
-            <NavDropdown
+            <Nav.Link
+              as={Link}
+              to="/donate"
+              style={linkStyle}
+              onMouseEnter={(e) => Object.assign(e.target.style, linkHoverStyle)}
+              onMouseLeave={(e) => Object.assign(e.target.style, linkStyle)}
+            >
+              <FaDonate className="me-2" /> Donate
+            </Nav.Link>
+
+            {/* <NavDropdown
               title={<><FaDonate className="me-2" /> Donate</>}
               id="donateDropdown"
               className="fs-5"
@@ -135,7 +145,7 @@ const CustomNavbar = () => {
               <NavDropdown.Item as={Link} to="/scholarships">
                 <FaDonate className="me-2" /> Scholarships
               </NavDropdown.Item>
-            </NavDropdown>
+            </NavDropdown> */}
           </Nav>
 
           <div className="d-flex align-items-center me-3">
