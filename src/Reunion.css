@@ -48,6 +48,12 @@
 .register-btn:hover {
   background-color: #e65100;
 }
+
+.register-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -91,8 +97,21 @@
   font-weight: bold;
   color: #333;
   cursor: pointer;
+  background: none;
+  border: none;
 }
-
+.close-btn:hover {
+  color: #666;
+}
+.reunion-form h2 {
+  color: #333;
+  margin-bottom: 10px;
+}
+.reunion-form .event-title {
+  color: #666;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
 .reunion-form input {
   width: 100%;
   padding: 10px;
@@ -100,8 +119,58 @@
   font-size: 16px;
   border-radius: 6px;
   border: 1px solid #ccc;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
 }
-
+.reunion-form input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+.reunion-form input:disabled {
+  background-color: #f5f5f5;
+  cursor: not-allowed;
+}
+.form-select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  background-color: #fff;
+  cursor: pointer;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="%23666" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 20px;
+  padding-right: 40px;
+}
+.form-select:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+.form-select:hover {
+  border-color: #80bdff;
+}
+.form-select:disabled {
+  background-color: #f5f5f5;
+  cursor: not-allowed;
+  color: #999;
+}
+.form-select option {
+  color: #333;
+  background-color: #fff;
+  padding: 8px;
+}
+.form-select option:first-child {
+  color: #999;
+}
 .submit-btn {
   width: 100%;
   background-color: #007bff;
@@ -111,8 +180,252 @@
   font-size: 16px;
   border-radius: 6px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
 }
-
 .submit-btn:hover {
   background-color: #0056b3;
+}
+.submit-btn:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+/* Form Display Fields */
+.form-display-field {
+  width: 100%;
+  margin: 10px 0;
+  box-sizing: border-box;
+}
+
+.field-label {
+  display: block;
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.field-value {
+  background-color: #f8f9fa;
+  border: 2px solid #e9ecef;
+  border-radius: 6px;
+  padding: 12px;
+  font-size: 16px;
+  color: #333;
+  font-weight: 500;
+  border-left: 4px solid #007bff;
+  background-image: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+.loading {
+  color: white;
+  font-size: 1.2rem;
+  text-align: center;
+}
+.error-message {
+  color: #ff6b6b;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+}
+.retry-btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.retry-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Enhanced Stylish Popup Notification */
+.popup {
+  position: fixed;
+  top: -100px;
+  right: 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 0;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15), 0 10px 20px rgba(0, 0, 0, 0.1);
+  z-index: 10000;
+  min-width: 350px;
+  max-width: 450px;
+  opacity: 0;
+  transform: translateY(-20px) scale(0.95);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+}
+
+.popup.show {
+  top: 20px;
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  animation: slideInBounce 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.popup.success {
+  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+}
+
+.popup.warning {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.popup.error {
+  background: linear-gradient(135deg, #fc466b 0%, #3f5efb 100%);
+}
+
+.popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px 10px 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.popup-title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: #ffffff;
+}
+
+.popup-close {
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  font-weight: 300;
+  line-height: 1;
+}
+
+.popup-close:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: scale(1.1);
+}
+
+.popup-message {
+  padding: 20px 24px 24px 24px;
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.6;
+  white-space: pre-line;
+  color: rgba(255, 255, 255, 0.95);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Add some animation keyframes for more dynamic effects */
+@keyframes slideInBounce {
+  0% {
+    transform: translateY(-100px) scale(0.8);
+    opacity: 0;
+  }
+  60% {
+    transform: translateY(10px) scale(1.05);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+/* Add a subtle glow effect */
+.popup::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0.1), transparent, rgba(255, 255, 255, 0.1));
+  border-radius: 18px;
+  z-index: -1;
+  opacity: 0.5;
+}
+
+/* Success variant glow */
+.popup.success::before {
+  background: linear-gradient(45deg, rgba(56, 239, 125, 0.3), transparent, rgba(17, 153, 142, 0.3));
+}
+
+/* Warning variant glow */
+.popup.warning::before {
+  background: linear-gradient(45deg, rgba(245, 87, 108, 0.3), transparent, rgba(240, 147, 251, 0.3));
+}
+
+/* Error variant glow */
+.popup.error::before {
+  background: linear-gradient(45deg, rgba(63, 94, 251, 0.3), transparent, rgba(252, 70, 107, 0.3));
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .reunion-content {
+    padding: 20px;
+    margin: 10px;
+  } 
+  .reunion-title {
+    font-size: 2rem;
+  } 
+  .modal-content {
+    margin: 20px;
+    max-width: calc(100vw - 40px);
+  }
+}
+
+@media (max-width: 480px) {
+  .reunion-content {
+    padding: 15px;
+  }
+  .reunion-title {
+    font-size: 1.8rem;
+  }
+  .reunion-description {
+    font-size: 1rem;
+  }
+  
+  /* Mobile popup adjustments */
+  .popup {
+    left: 10px;
+    right: 10px;
+    min-width: auto;
+    max-width: none;
+  }
+  
+  .popup.show {
+    top: 10px;
+  }
+  
+  .popup-header {
+    padding: 16px 20px 8px 20px;
+  }
+  
+  .popup-title {
+    font-size: 16px;
+  }
+  
+  .popup-message {
+    padding: 16px 20px 20px 20px;
+    font-size: 14px;
+  }
 }

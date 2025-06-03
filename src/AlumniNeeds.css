@@ -1,5 +1,5 @@
 .alumni-background {
-  background-image: url("https://c4.wallpaperflare.com/wallpaper/223/48/930/plexus-network-abstract-line-art-connectivity-hd-wallpaper-preview.jpg");
+  background-image: url("https://img.freepik.com/free-vector/party-crowd-silhouettes-dancing-nightclub_1048-11557.jpg?semt=ais_hybrid&w=740");
   background-size: cover;
   background-position: center;
   min-height: 100vh;
@@ -8,7 +8,7 @@
 .alumni-title {
   font-size: 2.5rem;
   font-weight: bold;
-  color: white;
+  color: rgb(251, 251, 251);
   text-align: center;
   margin: 0 20px;
 }
